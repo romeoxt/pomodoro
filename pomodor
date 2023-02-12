@@ -1,0 +1,23 @@
+import time
+
+def pomodoro_timer(minutes):
+    start_time = time.time()
+    elapsed_time = 0
+    
+    while elapsed_time < minutes * 60:
+        time.sleep(1)
+        elapsed_time = time.time() - start_time
+    
+    print(f'Time is up! You worked for {minutes} minutes.')
+
+while True:
+    # Ask the user for the desired Pomodoro time
+    pomodoro_length = int(input('Enter the length of the Pomodoro (in minutes): '))
+    
+    # Start the Pomodoro timer
+    pomodoro_timer(pomodoro_length)
+    
+    # Ask the user if they want to start another Pomodoro
+    another_pomodoro = input('Do you want to start another Pomodoro (y/n)? ')
+    if another_pomodoro.lower() != 'y':
+        break
