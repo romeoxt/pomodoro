@@ -21,3 +21,4 @@ while True:
     another_pomodoro = input('Do you want to start another Pomodoro (y/n)? ')
     if another_pomodoro.lower() != 'y':
         break
+hi
